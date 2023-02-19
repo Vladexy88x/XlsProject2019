@@ -24,7 +24,6 @@ namespace FreelanceProj1
         public MainForm()
         {
             InitializeComponent();
-
         }
 
         private void StartParse_Click(object sender, EventArgs e)
@@ -39,41 +38,12 @@ namespace FreelanceProj1
             //xlsWorker.WriteDataXlsx();
             // xlsWorker.ReadDataXlsx();
             xlsWorker.WriteDataXlsxBeta(listBox1, urlTargetInp.Text);
-        
-
         }
-
-        //private void OuterHtmlSite()
-        //{
-        //    HtmlAgilityPack.HtmlDocument document = new HtmlAgilityPack.HtmlDocument();
-        //    string innerAllHtml = null;
-                    
-        //    System.Net.HttpWebRequest request = (System.Net.HttpWebRequest)System.Net.WebRequest.Create("https://vivt.ru/");
-        //    System.Net.HttpWebResponse response = (System.Net.HttpWebResponse)request.GetResponse();
-        //    using (var streamResponse = new StreamReader(response.GetResponseStream()))
-        //    {
-        //        innerAllHtml = streamResponse.ReadToEnd();
-        //        response.Close();
-        //    }
-
-        //    HtmlAgilityPack.HtmlWeb htmlWeb = new HtmlAgilityPack.HtmlWeb() { AutoDetectEncoding = true, OverrideEncoding = Encoding.UTF8 };
-
-
-        //    document.LoadHtml(innerAllHtml);
-            
-
-        //    HtmlAgilityPack.HtmlNodeCollection nodes = document.DocumentNode.SelectNodes("//ul/li/span[1]");
-        //    foreach (HtmlAgilityPack.HtmlNode node in nodes)
-        //    {
-        //        listBox1.Items.Add(node.OuterHtml);
-        //    }
-        //}
-
+        
         private void LoadFileXlsx_Click(object sender, EventArgs e)
         {
-            LoadFile xlsLoadFile = new LoadFile();
+            var xlsLoadFile = new LoadFile();
             fullFileName = xlsLoadFile.CustomLoadFile(openFileDialog1);
-            
         }
     }
 }
