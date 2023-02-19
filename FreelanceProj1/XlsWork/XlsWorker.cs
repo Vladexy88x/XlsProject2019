@@ -112,7 +112,7 @@ namespace FreelanceProj1.XlsWork
         {
             ParseWork parseWork = new ParseWork();
 
-            XLWorkbook workbook = new XLWorkbook(); //new XLWorkbook(@"C:\Users\xaNe\Documents\Visual Studio 2017\Projects\FreelanceProj1\FreelanceProj1\bin\Debug\helloCloseXML.xlsx");
+            XLWorkbook workbook = new XLWorkbook();
             var editWorkSheet = workbook.Worksheets.Add("sheetName");
             var listCountResult = parseWork.ParseTag(listBox, uriInput);
             //object resSrt = null;
@@ -166,7 +166,7 @@ namespace FreelanceProj1.XlsWork
 
         public void ReadDataXlsx()
         {
-            using (var workbook = new XLWorkbook(@"C:\Users\xaNe\Documents\Visual Studio 2017\Projects\FreelanceProj1\FreelanceProj1\bin\Debug\helloCloseXML.xlsx"))
+            using (var workbook = new XLWorkbook(@""))
             {
                 var loadWorkSheet = workbook.Worksheet("sheetName");
                 string a = loadWorkSheet.Cell("A5").GetString();
